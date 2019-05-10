@@ -1,0 +1,110 @@
+/*通用 */
+view{
+	font-size:28upx; 
+	line-height:1.8;
+}
+progress, checkbox-group{
+	width: 100%;
+}
+form {
+	width: 100%;
+}
+.uni-flex {
+	display: flex;
+	flex-direction: row;
+}
+.uni-flex-item {
+	flex: 1;
+}
+.uni-row {
+	flex-direction: row;
+}
+.uni-column {
+	flex-direction: column;
+}
+.uni-link{
+	color:#576B95;
+	font-size:26upx;
+}
+.uni-center{
+	text-align:center;
+}
+.uni-inline-item{
+	display: flex;
+	flex-direction: row;
+	align-items:center;
+}
+.uni-inline-item text{
+	margin-right: 20upx;
+}
+.uni-inline-item text:last-child{
+	margin-right: 0upx;
+	margin-left: 20upx;
+}
+
+/* page */
+.uni-page-head{
+	padding:35upx; 
+	text-align: center;
+}
+.uni-page-head-title {
+	display: inline-block;
+	padding: 0 40upx;
+	font-size: 30upx;
+	height: 88upx;
+	line-height: 88upx;
+	color: #BEBEBE;
+	box-sizing: border-box;
+	border-bottom: 2upx solid #D8D8D8;
+}
+.uni-page-body {
+	width: 100%;
+	flex-grow: 1;
+	overflow-x: hidden;
+}
+.uni-padding-wrap{
+	width:690upx;
+	padding:0 30upx;
+}
+.uni-word {
+	text-align: center;
+	padding:200upx 100upx;
+}
+.uni-title {
+	font-size:30upx;
+	font-weight:500;
+	padding:20upx 0;
+	line-height:1.5;
+}
+.uni-text{
+	font-size:28upx;
+}
+.uni-title text{
+	font-size:24upx; 
+	color:#888;
+}
+
+.uni-text-gray{
+	color: #ccc;
+}
+.uni-text-small {
+	font-size:24upx;
+}
+
+/* 标题 */
+.uni-h1 {font-size: 80upx; font-weight:700;}
+.uni-h2 {font-size: 60upx; font-weight:700;}
+.uni-h3 {font-size: 48upx; font-weight:700;}
+.uni-h4 {font-size: 36upx; font-weight:700;}
+.uni-h5 {font-size: 28upx; color: #8f8f94;}
+.uni-h6 {font-size: 24upx; color: #8f8f94;}
+.uni-bold{font-weight:bold;}
+
+/* 文本溢出隐藏 */
+.uni-ellipsis {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+/* 竖向百分百按钮 */
+.uni-btn-v{
+	padding:10upx 0;
+}
+.uni-btn-v button{margin:20upx 0;}

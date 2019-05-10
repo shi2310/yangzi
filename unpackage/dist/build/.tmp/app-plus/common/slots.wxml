@@ -1,0 +1,22 @@
+<import src="/components/uni-icon/uni-icon.vue.wxml" />
+<import src="/components/list-view/uni-list.vue.wxml" />
+<import src="/components/list-view/uni-list-item.vue.wxml" />
+<import src="/components/uni-nav-bar/uni-nav-bar.vue.wxml" />
+<import src="/components/uni-grid/uni-grid.vue.wxml" />
+<import src="/components/uni-list/uni-list.vue.wxml" />
+<import src="/components/uni-search/uni-search.vue.wxml" />
+<import src="/common/slots.wxml" />
+<import src="/components/uni-list/uni-list-item.vue.wxml" />
+<import src="/components/uni-load-more/uni-load-more.vue.wxml" />
+<import src="/components/uni-badge/uni-badge.vue.wxml" />
+
+<template name="732de629-default-732de629-6"><template show-extra-icon="true" title="消息" show-badge="true" badge-text="7" show-arrow="true" data="{{...$root['0'], ...$root[$kk+'732de629-1'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="我赞过的" data="{{...$root['0'], ...$root[$kk+'732de629-2'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="我评过的" show-badge="true" badge-text="5" data="{{...$root['0'], ...$root[$kk+'732de629-3'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="勋章" show-arrow="true" data="{{...$root['0'], ...$root[$kk+'732de629-4'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="关注" show-arrow="false" data="{{...$root['0'], ...$root[$kk+'732de629-5'],$root}}" is="7664ce00"></template></template>
+
+<template name="732de629-default-732de629-9"><template title="意见反馈" show-extra-icon="true" show-badge="true" badge-text="12" data="{{...$root['0'], ...$root[$kk+'732de629-7'],$root}}" is="7664ce00"></template><template title="设置" show-extra-icon="true" show-arrow="false" data="{{...$root['0'], ...$root[$kk+'732de629-8'],$root}}" is="7664ce00"></template></template>
+
+<template name="53ee91e5-default-53ee91e5-0"><input confirm-type="search" bindconfirm="handleProxy" class="_input 53ee91e5 input" type="text" placeholder="输入搜索关键词" data-eventid="{{'53ee91e5-0'}}" data-comkey="{{$k}}" /></template>
+
+<template name="53ee91e5-default-53ee91e5-2"><template type="search" color="gray" size="18" data="{{...$root['0'], ...$root[$kk+'53ee91e5-0'],$root, $slotdefault:'53ee91e5-default-53ee91e5-0'}}" is="3a775af6"></template></template>
+
+<template name="53ee91e5-right-53ee91e5-2"><template type="plus-filled" color="#D1D1D1" size="24" bindtap="handleProxy" data-eventid="{{'53ee91e5-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'53ee91e5-1'],$root}}" is="3a775af6"></template></template>
+

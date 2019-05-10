@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="UTF-8" />
+        <script>
+            var coverSupport = 'CSS' in window && typeof CSS.supports === 'function' && (CSS.supports('top: env(a)') || CSS.supports('top: constant(a)'))
+            document.write('<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0' + (coverSupport ? ', viewport-fit=cover' : '') + '" />')
+        </script>
+        <title>View</title>
+        <style>
+            * {
+                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+                -webkit-tap-highlight-color: transparent;
+            }
+
+            input[type="search"i]::-webkit-search-cancel-button {
+                display: none;
+            }
+
+        </style>
+        <script>
+            var __wxConfig = {"debug":false,"appname":"YangZi","entryPagePath":"pages/home/index.html","page":{"pages/home/index.html":{"window":{"usingComponents":{},"navigationBarTitleText":"首页"}},"pages/garden/list.html":{"window":{"usingComponents":{},"navigationBarTitleText":"花间"}},"pages/my/index.html":{"window":{"usingComponents":{},"navigationBarTitleText":"我"}},"pages/home/detail.html":{"window":{"usingComponents":{},"navigationBarTitleText":"详情"}}},"global":{"window":{"navigationBarTextStyle":"black","navigationBarTitleText":"花间","navigationBarBackgroundColor":"#F8F8F8"}},"tabBar":{"color":"#7A7E83","selectedColor":"#007AFF","backgroundColor":"#F8F8F8","borderStyle":"black","list":[{"pagePath":"pages/home/index.html","iconPath":"static/template.png","selectedIconPath":"static/templateHL.png","text":"首页"},{"pagePath":"pages/garden/list.html","iconPath":"static/component.png","selectedIconPath":"static/componentHL.png","text":"花间"},{"pagePath":"pages/my/index.html","iconPath":"static/extui.png","selectedIconPath":"static/extuiHL.png","text":"我"}],"position":"bottom"},"networkTimeout":{"request":60000,"connectSocket":60000,"uploadFile":60000,"downloadFile":60000},"platform":"devtools","pages":["pages/home/index","pages/garden/list","pages/my/index","pages/home/detail"],"subPackages":[],"usingComponents":{},"splashscreen":{"alwaysShowBeforeRender":true,"autoclose":false},"compilerVersion":"1.9.4"}
+
+        </script>
+        <script>
+            var __id__ = '';
+            window.__dispatchGenerateFunc__ = function(page) {
+                __id__ = page;
+                document.title = page;
+                // window.history.pushState('', '', page);
+                plus.webview.currentWebview().setJsFile('_www/' + page.replace('.html', '.js'));
+            };
+
+        </script>
+        <script src="__uniappes6.js"></script>
+        <script src="uniapp://ready"></script>
+    </head>
+
+    <body>
+        <div></div>
+    </body>
+
+</html>

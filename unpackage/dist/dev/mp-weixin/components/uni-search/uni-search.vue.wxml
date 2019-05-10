@@ -1,0 +1,1 @@
+<import src="/components/uni-nav-bar/uni-nav-bar.vue.wxml" /><import src="/components/uni-icon/uni-icon.vue.wxml" /><template name="53ee91e5"><template color="#333333" background-color="#F4F5F6" data="{{...$root['0'], ...$root[$kk+'53ee91e5-2'],$root, $slotdefault:'53ee91e5-default-53ee91e5-2',$slotright:'53ee91e5-right-53ee91e5-2'}}" is="b68030c2"></template></template>
