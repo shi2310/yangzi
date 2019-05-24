@@ -42,7 +42,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	.uni-navbar-content {
 		display: flex;
 		flex-direction: row;

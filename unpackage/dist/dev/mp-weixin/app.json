@@ -3,7 +3,8 @@
     "pages/home/index",
     "pages/garden/list",
     "pages/my/index",
-    "pages/home/detail"
+    "pages/details/details",
+    "pages/details/videoDetails"
   ],
   "subPackages": [],
   "window": {

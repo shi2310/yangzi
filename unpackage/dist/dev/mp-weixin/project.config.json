@@ -9,7 +9,7 @@
 		"minified": true,
 		"es6": true
 	},
-	"compileType": "plugin",
+	"compileType": "miniprogram",
 	"libVersion": "2.6.4",
 	"appid": "wxb023e9e3b4a25418",
 	"projectname": "YangZi",
@@ -29,15 +29,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
-			"list": [
-				{
-					"name": "",
-					"path": "",
-					"query": "",
-					"id": 0
-				}
-			]
+			"current": -1,
+			"list": []
 		}
 	}
 }

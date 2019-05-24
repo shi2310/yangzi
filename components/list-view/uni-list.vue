@@ -1,3 +1,4 @@
+<!-- 我的-各种列表项 -->
 <template>
 	<view class="uni-list">
 		<slot></slot>

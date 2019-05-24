@@ -1,3 +1,4 @@
+<!-- 图文按钮 -->
 <template>
 	<view class="view" @click="onClick()">
 		<view class="uni-icon" :class="['uni-icon-'+type]" :style="{color:color,'font-size':fontSize}">
@@ -44,7 +45,7 @@
 	}
 </script>
 
-<style>
+<style scoped>
 	@font-face {
 		font-family: uniicons;
 		font-weight: normal;

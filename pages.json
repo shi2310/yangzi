@@ -19,9 +19,23 @@
 			}
 		},
 		{
-			"path": "pages/home/detail",
-			"style": {
-				"navigationBarTitleText": "详情"
+		    "path" : "pages/details/details",
+		    "style" : {
+				"navigationBarTitleText" : "详情",
+				"app-plus": {
+					"navigationBarTextStyle": "white",
+					"bounce": "none"
+				}
+			}
+		},
+		{
+		    "path" : "pages/details/videoDetails",
+		    "style" : {
+				"navigationBarTitleText" : "详情",
+				"app-plus": {
+					"navigationBarTextStyle": "white",
+					"bounce": "none"
+				}
 			}
 		}
 	],

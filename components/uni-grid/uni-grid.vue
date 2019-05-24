@@ -1,3 +1,4 @@
+<!-- 首页按钮宫格 -->
 <template>
 	<view class="uni-grid" :class="setBorderClass">
 		<view class="uni-grid__flex" v-for="(items,i) in gridGroup" :key="i">

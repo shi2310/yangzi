@@ -28,12 +28,7 @@
 	}
 </script>
 
-<style>
-	view {
-		font-size: 28upx;
-		line-height: inherit;
-	}
-
+<style scoped>
 	.input {
 		width: 94%;
 		padding: 0 3%;

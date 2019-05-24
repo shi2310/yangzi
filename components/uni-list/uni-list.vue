@@ -1,11 +1,14 @@
+<!-- 新闻列表 -->
 <template>
-	<scroll-view class="list" scroll-y @scrolltolower="loadMore">
-		<block v-for="(item,index) in dataSource" :key="index">
-			<uni-list-item :data="item" @click="goDetail(item)"></uni-list-item>
-		</block>
-		<view class="uni-tab-bar-loading">
-			<uni-load-more :status="loadingStatus"></uni-load-more>
+	<scroll-view 
+		class="panel-scroll-box" 
+		:scroll-y="enableScroll" 
+		@scrolltolower="loadMore"
+		>
+		<view v-for="(item, index) in dataSource" :key="index" class="news-item" @click="navToDetails(item)">
+			<uni-list-item :item="item"></uni-list-item>
 		</view>
+		<uni-load-more :status="loadingStatus"></uni-load-more>
 	</scroll-view>
 </template>
 <script>
@@ -25,14 +28,27 @@
 				}
 			},
 			loadingStatus: {
-				type: String,
-				default: "more"
+				type: Number,
+				default: 0
+			},
+			enableScroll:{
+				type:Boolean,
+				default:true
 			}
 		},
 		methods: {
-			goDetail(item) {
+			//新闻详情
+			navToDetails(item){
+				let data = {
+					id: item.id,
+					title: item.title,
+					author: item.author,
+					time: item.time
+				}
+				let url = item.videoSrc ? 'videoDetails' : 'details'; 
+			
 				uni.navigateTo({
-					url: '/pages/home/detail?detailDate=' + encodeURIComponent(JSON.stringify(item))
+					url: `/pages/details/${url}?data=${JSON.stringify(data)}`
 				})
 			},
 			loadMore() {
@@ -42,10 +58,16 @@
 	}
 </script>
 
-<style>
-	.list {
-		width: 100%;
+<style lang='scss' scoped>	
+	.panel-scroll-box{
 		height: 100%;
-		overflow: hidden;
+	}
+	
+	.news-item{
+		position:relative;
+		padding: 24upx 30upx;
+		border-bottom-width: 1px;
+		border-color: #eee;
+		background-color: #fff;
 	}
 </style>

@@ -22,6 +22,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 {
   name: "uni-grid",
   props: {
@@ -95,7 +96,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _regenerator = _interopRequireDefault(__webpack_require__(/*! ./node_modules/@babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js"));
 
 
 
@@ -120,50 +121,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+var _json = _interopRequireDefault(__webpack_require__(/*! @/json */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\json.js"));
 var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\uni-icon\\uni-icon.vue"));
 var _uniGrid = _interopRequireDefault(__webpack_require__(/*! @/components/uni-grid/uni-grid.vue */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\uni-grid\\uni-grid.vue"));
-var _uniList = _interopRequireDefault(__webpack_require__(/*! @/components/uni-list/uni-list.vue */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\uni-list\\uni-list.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-
-var dataArticles = [{
-  "datetime": "45分钟前",
-  "title": "缘起则聚，缘灭则散",
-  "content": "夜，结束了一天的喧嚣后安静下来，伴随着远处路灯那微弱的光。风，毫无预兆地席卷整片旷野，撩动人的思绪万千。星，遥遥地挂在天空之中，闪烁着它那微微星光，不如阳光般灿烂却如花儿般如痴如醉",
-  "source": "DCloud",
-  "star_count": 639,
-  "comment_count": 147 },
-{
-  "datetime": "一天前",
-  "title": "秋风，唱给田野动听的歌",
-  "content": "秋风用时光的旋律，用桂花的芬芳、苹果的馨香、菊花的灿烂、牵牛花的奔放、一串红的艳丽，把一望无际的田野乡村，演绎得在自然中沉醉，渲染得天地间空旷而又阳刚",
-  "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/shuijiao.jpg?imageView2/3/w/200/h/100/q/90",
-  "source": "DCloud",
-  "star_count": 89,
-  "comment_count": 1411 },
-{
-  "datetime": "一天前",
-  "title": "中国技术界小奇迹：HBuilder开发者突破200万",
-  "content": "秋风用时光的旋律，用桂花的芬芳、苹果的馨香、菊花的灿烂、牵牛花的奔放、一串红的艳丽，把一望无际的田野乡村，演绎得在自然中沉醉，渲染得天地间空旷而又阳刚",
-  "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/muwu.jpg?imageView2/3/w/200/h/100/q/90",
-  "source": "DCloud",
-  "star_count": 639,
-  "comment_count": 14 },
-{
-  "datetime": "2小时前",
-  "title": "时光荏苒，蹉跎了谁的年华",
-  "content": "当清晨的一缕阳光透过窗帘上的空隙映照在沉睡的脸庞时，微微张开的双眼朦胧地注视着周遭的一切，新的一天悄然而至",
-  "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90",
-  "source": "DCloud",
-  "star_count": 687,
-  "comment_count": 5447 },
-{
-  "image_url": "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/cbd.jpg?imageView2/3/w/200/h/100/q/90",
-  "datetime": "5分钟前",
-  "title": "留住浓浓的年味",
-  "content": "年味是什么？年味是家乡人准备过年忙碌的身影和开心的笑容，是家乡腊月集市的喧闹和繁荣。年味是家乡的馓子和大肉的喷香，是家乡红芋粉丝的筋道。年味是红红火火的场景，红红的灯笼，红红的春联，红红的蜡烛",
-  "source": "DCloud",
-  "star_count": 9,
-  "comment_count": 1417 }];
-
+var _uniList = _interopRequireDefault(__webpack_require__(/*! @/components/uni-list/uni-list.vue */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\uni-list\\uni-list.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}
 
 var dataSwiper = [{
   img: '/static/photo.jpg' },
@@ -184,7 +145,7 @@ var dataSwiper = [{
   data: function data() {
     return {
       articleItems: [],
-      loadingStatus: 'more',
+      loadingStatus: 0,
       swiperSource: [],
       msg: [
       '行业峰会频频亮相，开发者反响热烈',
@@ -192,19 +153,19 @@ var dataSwiper = [{
       '作家出版社签约，拟合作出版优秀文集'],
 
       data3: [{
-        image: '/static/礼物.png',
+        image: '/static/gift.png',
         text: '礼物' },
 
       {
-        image: '/static/标注.png',
+        image: '/static/star.png',
         text: '标注' },
 
       {
-        image: '/static/牵手.png',
+        image: '/static/hand.png',
         text: '牵手' },
 
       {
-        image: '/static/喜欢.png',
+        image: '/static/like.png',
         text: '喜欢' }] };
 
 
@@ -215,17 +176,23 @@ var dataSwiper = [{
     this.addData();
   },
   methods: {
-    addData: function addData() {
-      this.loadingStatus = "loading";
-      if (this.articleItems.length > 30) {
-        this.loadingStatus = "noMore";
-      } else {
-        for (var i = 1; i <= 10; i++) {
-          this.articleItems.push(dataArticles[Math.floor(Math.random() * 5)]);
-        }
-        this.loadingStatus = "more";
-      }
-    } } };exports.default = _default;
+    addData: function () {var _addData = _asyncToGenerator( /*#__PURE__*/_regenerator.default.mark(function _callee() {var _this = this;var list;return _regenerator.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+                this.loadingStatus = 1;_context.next = 3;return (
+                  _json.default.newsList);case 3:list = _context.sent;
+                setTimeout(function () {
+                  if (_this.articleItems.length > 30) {
+                    _this.loadingStatus = 2;
+                  } else {
+                    list.sort(function (a, b) {
+                      return Math.random() > .5 ? -1 : 1; //静态数据打乱顺序
+                    });
+                    list.length = 5;
+                    list.forEach(function (item) {
+                      _this.articleItems.push(item);
+                    });
+                    _this.loadingStatus = 0;
+                  }
+                }, 1000);case 5:case "end":return _context.stop();}}}, _callee, this);}));function addData() {return _addData.apply(this, arguments);}return addData;}() } };exports.default = _default;
 
 /***/ }),
 

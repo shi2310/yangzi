@@ -1,23 +1,19 @@
 <template>
-	<view class="media-list" hover-class="media-list-hover" @click="bindClick">
-		<view class="media-head">
-			<text class="media-head-title">{{data.title}}</text>
-			<view class="media-head-author">
-				<text class="info-text">{{data.source}}</text>
-				<uni-icon type="eye" color="gray" size="18">
-				</uni-icon>
+	<view>
+		<text :class="['title', 'title'+item.type]">{{item.title}}</text>
+		<view v-if="item.images.length > 0" :class="['img-list', 'img-list'+item.type, item.images.length === 1 && item.type===3 ? 'img-list-single': '']">
+			<view v-for="(imgItem, imgIndex) in item.images" :key="imgIndex" :class="['img-wrapper', 'img-wrapper'+item.type, item.images.length === 1 && item.type===3 ? 'img-wrapper-single': '']">
+				<image class="img" :src="imgItem"></image>
+				<view class="video-tip" v-if="item.videoSrc">
+					<image class="video-tip-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEC0lEQVRoQ+2ajVEVMRDHdzuwA6ACpQKxArECtQKxAqECoQKhAqECoQKxAqEDrWCdn7Nx8vJy+bp3T4YhM2+O8S7J/rO7//2IKo9k6CPBIU9Acpo0s10ReSkiPA8mtH0tIncicqOqPDcyZmvEhX8rIu8cQI9gtyJyKSIXc0ENA3EAnxxAj/BT356LyEdV/TWyWDcQM3smIgA4mtjwXkQ4aX4Mngj3QkSYy5PfTmb+laoeLg7EzBDga8aEEB4TOVfVAKAoj2sUc+QXQC0PxMzY8Esi3W8ROVbV05FTDHPMDC1AEBzEcqY1AeLMQQxtXANuZvjMa/cb/i6Oqo9kQKCFI1WtLl7bfOq9mUHd3/w9ND1F5f+WKAJxn/gebQiIg1Y/mAEEUsDX8J0zVZ0iljoQZydAYLuMrYCIwXOQrYc2qREzw4E/RAu/X9KcRrUX5mWBODX+jBY/UdXjuZuNznd5PnscepNjtikgODJpRzCp3VFaHBU+MTEOkSDMIJ0hFKyMNSAZbZA2NMUJn7ujqjebABDWyDDnXpqb5YDEvnGvqsHZi7I5CMgBxiHDxRx5bmSYGZlyyADWmCwHBN8IwjdRH5Im3B+En5UIJuYFBeMnjFtV3Y/frwDJmNV+K/1NAGEvIv+pqp7MUU1GthXzSoHE+VSzWRU0EsuOaUDhw+aWmNdKOEiBxOzQlYkWNJIqAiAI0V0dmhkZNvkXYyUkpEDYhFJ17cOaWXQACUtxaPhgc9JpZvFBr+Rg/xNI8B+0w0lXR0LDzUCIoE0bNPpISdC1uJD7uJQVlzTyEIFQgFGhMpo10pVfDfgIwlAiU9s0af4h+gglARkE8WURZ98G/V65Fhal3zgg3qnqXpVK/IMG0/rhAOYExDh9KgZEcqy4DtlEirKpTgutqLjsnk5RnEaLWeaUhiY0srFOS1KxrqVPtTS+2by8xsdsnkONNN5G0pDCQcVmtcaoLYVVV63e0zDo8L+0OVgvrNy84lIXemRiM022CtjynWsabVCwMdpKXQeSOlZXcGwRsPWbJAgyLZvOPOh2UKZWn6xYS0Dibl/IVF+1VoytJ15wbqyCtmkwKdIZGnZZE+9tmbLI4mC8VRuDAG8xpo00sQFDi2iRJrabU2jGBYVVmbMKxJ0/dzfSXeGVzM3ZiRZt2tGsgmDdJiAFMGiHNPxijk+YGV1NsuHgD82aCB82A4lomdohvf8jrQm3s61XbzgzAMJtVXwWOPZhD7F0AXEwnBrqjzv1sRCACnfp/HvIdsNlTbiDn+pgDuVn3UCCxN4wA1Bods+xrr8R26/yuuuULh8p8D0nSzsTE8ldOZcAhttgKsUhAEM+Ujty1xIm1PJfOK7nCh/LM2xaNVDbfv8EZNsnXtvvDyrmF1FIBKIwAAAAAElFTkSuQmCC"></image>
+				</view>
 			</view>
-			<text class="info-text">{{data.datetime}}</text>
 		</view>
-		<view class="media-body">
-			<text class="media-content">{{data.content}}</text>
-			<image v-if="showImg" class="image" :src="data.image_url"></image>
-		</view>
-		<view class="media-foot">
-			<uni-icon type="star" color="gray" size="18" :txt="data.star_count" />
-			<view style="margin-left: 30upx;">
-				<uni-icon type="chat" color="gray" size="18" :txt="data.comment_count" />
-			</view>
+		<!-- 空图片占位 -->
+		<view v-else class="img-empty"></view>
+		<view :class="['bot', 'bot'+item.type]">
+			<text class="author">{{item.author}}</text>
+			<text class="time">{{item.time}}</text>
 		</view>
 	</view>
 </template>
@@ -30,16 +26,11 @@
 			uniIcon
 		},
 		props: {
-			data: {
+			item: {
 				type: Object,
 				default: function(e) {
 					return {}
 				}
-			}
-		},
-		computed: {
-			showImg() {
-				return this.data.image_url
 			}
 		},
 		methods: {
@@ -50,69 +41,124 @@
 	}
 </script>
 
-<style>
-	.media-list {
-		flex: 1;
-		display: flex;
+<style scoped>
+	view{
+		display:flex;
 		flex-direction: column;
-		border-bottom-width: 1upx;
-		border-bottom-style: solid;
-		border-bottom-color: #c8c7cc;
-		padding: 20upx 30upx;
 	}
-
-	.media-list-hover {
-		background-color: #eeeeee;
-	}
-
-	.media-head {
-		display: flex;
-		flex-direction: column;
-		padding: 10upx 0;
-	}
-
-	.media-head-title {
+	
+	.title {
 		font-size: 32upx;
-		font-weight: bold;
-		color: #000;
+		color: #303133;
+		line-height: 46upx;
 	}
 
-	.media-head-author {
-		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.media-body {
-		display: flex;
+	.bot {
 		flex-direction: row;
 	}
 
-	.media-content {
+	.author {
+		font-size: 26upx;
+		color: #aaa;
+	}
+
+	.time {
+		font-size: 26upx;
+		color: #aaa;
+		margin-left: 20upx;
+	}
+
+	.img-list {
+		flex-shrink: 0;
+		flex-direction: row;
+		background-color: #fff;
+		width: 220upx;
+		height: 140upx;
+	}
+
+	.img-wrapper {
 		flex: 1;
-		/* 超出部分显示省略号 */
-		overflow: hidden;
-		text-overflow: ellipsis;
-		display: -webkit-box;
-		-webkit-line-clamp: 4;
-		-webkit-box-orient: vertical;
-
-		font-size: 30upx;
-		height: 154upx;
-		color: #555555;
-	}
-
-	.image {
-		margin-left: 10upx;
-		width: 200upx;
-		height: 160upx;
-	}
-
-	.media-foot {
-		margin-top: 20upx;
-		display: flex;
 		flex-direction: row;
-		justify-content: flex-end;
+		height: 140upx;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.img {
+		flex: 1;
+	}
+
+	.img-empty {
+		height: 20upx;
+	}
+
+	/* 图在左 */
+	.img-list1 {
+		position: absolute;
+		left: 30upx;
+		top: 24upx;
+	}
+
+	.title1 {
+		padding-left: 240upx;
+	}
+
+	.bot1 {
+		padding-left: 240upx;
+		margin-top: 20upx;
+	}
+
+	/* 图在右 */
+	.img-list2 {
+		position: absolute;
+		right: 30upx;
+		top: 24upx;
+	}
+
+	.title2 {
+		padding-right: 210upx;
+	}
+
+	.bot2 {
+		margin-top: 20upx;
+	}
+
+	/* 底部3图 */
+	.img-list3 {
+		width: 700upx;
+		margin: 16upx 0upx;
+	}
+
+	.img-wrapper3 {
+		margin-right: 4upx;
+	}
+
+	/* 底部大图 */
+	.img-list-single {
+		width: 690upx;
+		height: 240upx;
+		margin: 16upx 0upx;
+	}
+
+	.img-wrapper-single {
+		height: 240upx;
+		margin-right: 0upx;
+	}
+
+	.video-tip {
+		position: absolute;
+		left: 0;
+		top: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, .3);
+	}
+
+	.video-tip-icon {
+		width: 60upx;
+		height: 60upx;
 	}
 </style>

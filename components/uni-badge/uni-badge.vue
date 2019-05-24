@@ -1,3 +1,4 @@
+<!-- 徽标 -->
 <template>
 	<text class="uni-badge" v-if="text" :class="setClass" @click="onClick()">{{text}}</text>
 </template>
