@@ -19,20 +19,13 @@
 					</view>
 					<view class="actions">
 						<view class="action-item">
-							<text class="yticon icon-dianzan-ash"></text>
-							<text>75</text>
+							<uni-icon type="star" color="#000" size="20">75</uni-icon>
 						</view>
 						<view class="action-item">
-							<text class="yticon icon-dianzan-ash reverse"></text>
-							<text>6</text>
+							<uni-icon type="paperclip" color="#000" size="20">6</uni-icon>
 						</view>
 						<view class="action-item">
-							<text class="yticon icon-fenxiang2"></text>
-							<text>分享</text>
-						</view>
-						<view class="action-item">
-							<text class="yticon icon-shoucang active"></text>
-							<text>收藏</text>
+							<uni-icon type="pengyouquan" color="gray" size="20">分享</uni-icon>
 						</view>
 					</view>
 				</view>
@@ -73,8 +66,7 @@
 								<text>{{item.nickname}}</text>
 								<text>{{item.time}}</text>
 								<view class="zan-box">
-									<text>{{item.zan}}</text>
-									<text class="yticon icon-shoucang"></text>
+									<uni-icon type="checkmarkempty" color="#000" size="20">{{item.zan}}</uni-icon>
 								</view>
 								<text class="content">{{item.content}}</text>
 							</view>
@@ -104,9 +96,12 @@
 <script>
 	import json from '@/json';
 	import mixLoading from '@/components/mix-loading/mix-loading';
+	import uniIcon from '@/components/uni-icon/uni-icon.vue';
+	
 	export default {
 		components: {
-			mixLoading
+			mixLoading,
+			uniIcon
 		},
 		data() {
 			return {
@@ -206,9 +201,9 @@
 	/* 点赞等操作 */
 	.actions{
 		display: flex;
+		justify-content:space-around;
 		align-items: center;
 		line-height: 1.3;
-		padding-right: 44upx;
 		padding-top: 16upx;
 	
 		.action-item{
@@ -219,30 +214,6 @@
 			margin-right: 60upx;
 			font-size: 24upx;
 			color: #999;
-		}
-		.yticon{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			width: 60upx;
-			height: 60upx;
-			font-size: 52upx;
-			
-			&.reverse{
-				position: relative;
-				top: 6upx;
-				transform: scaleY(-1);
-			}
-			&.active{
-				color: #ec706b;
-			}
-		}
-		.icon-fenxiang2{
-			font-weight: bold;
-			font-size: 36upx;
-		}
-		.icon-shoucang{
-			font-size: 44upx;
 		}
 	}
 	.mix-loading{
@@ -378,9 +349,6 @@
 			position:absolute;
 			top: 10upx;
 			right: 10upx;
-			.yticon{
-				margin-left: 8upx; 
-			}
 		}
 		.content{
 			font-size: 28upx;

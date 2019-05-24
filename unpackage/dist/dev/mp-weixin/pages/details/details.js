@@ -97,19 +97,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
-
-
-
-
-
-
-
-
 var _json = _interopRequireDefault(__webpack_require__(/*! @/json */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\json.js"));
-var _mixLoading = _interopRequireDefault(__webpack_require__(/*! @/components/mix-loading/mix-loading */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\mix-loading\\mix-loading.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
+var _mixLoading = _interopRequireDefault(__webpack_require__(/*! @/components/mix-loading/mix-loading */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\mix-loading\\mix-loading.vue"));
+var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "C:\\Users\\ShimonShi\\Documents\\HBuilderProjects\\YangZi\\components\\uni-icon\\uni-icon.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {try {var info = gen[key](arg);var value = info.value;} catch (error) {reject(error);return;}if (info.done) {resolve(value);} else {Promise.resolve(value).then(_next, _throw);}}function _asyncToGenerator(fn) {return function () {var self = this,args = arguments;return new Promise(function (resolve, reject) {var gen = fn.apply(self, args);function _next(value) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);}function _throw(err) {asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);}_next(undefined);});};}var _default =
+
 {
   components: {
-    mixLoading: _mixLoading.default },
+    mixLoading: _mixLoading.default,
+    uniIcon: _uniIcon.default },
 
   data: function data() {
     return {
@@ -211,26 +206,63 @@ var render = function() {
                     staticClass: "actions"
                   },
                   [
-                    _c("view", { staticClass: "action-item" }, [
-                      _c("text", { staticClass: "yticon icon-dianzan-ash" }),
-                      _c("text", [_vm._v("75")])
-                    ]),
-                    _c("view", { staticClass: "action-item" }, [
-                      _c("text", {
-                        staticClass: "yticon icon-dianzan-ash reverse"
-                      }),
-                      _c("text", [_vm._v("6")])
-                    ]),
-                    _c("view", { staticClass: "action-item" }, [
-                      _c("text", { staticClass: "yticon icon-fenxiang2" }),
-                      _c("text", [_vm._v("分享")])
-                    ]),
-                    _c("view", { staticClass: "action-item" }, [
-                      _c("text", {
-                        staticClass: "yticon icon-shoucang active"
-                      }),
-                      _c("text", [_vm._v("收藏")])
-                    ])
+                    _c(
+                      "view",
+                      { staticClass: "action-item" },
+                      [
+                        _c(
+                          "uni-icon",
+                          {
+                            attrs: {
+                              type: "star",
+                              color: "#000",
+                              size: "20",
+                              mpcomid: "5afc328a-1"
+                            }
+                          },
+                          [_vm._v("75")]
+                        )
+                      ],
+                      1
+                    ),
+                    _c(
+                      "view",
+                      { staticClass: "action-item" },
+                      [
+                        _c(
+                          "uni-icon",
+                          {
+                            attrs: {
+                              type: "paperclip",
+                              color: "#000",
+                              size: "20",
+                              mpcomid: "5afc328a-2"
+                            }
+                          },
+                          [_vm._v("6")]
+                        )
+                      ],
+                      1
+                    ),
+                    _c(
+                      "view",
+                      { staticClass: "action-item" },
+                      [
+                        _c(
+                          "uni-icon",
+                          {
+                            attrs: {
+                              type: "pengyouquan",
+                              color: "gray",
+                              size: "20",
+                              mpcomid: "5afc328a-3"
+                            }
+                          },
+                          [_vm._v("分享")]
+                        )
+                      ],
+                      1
+                    )
                   ]
                 )
               ],
@@ -301,10 +333,25 @@ var render = function() {
                       _c("view", { staticClass: "eva-right" }, [
                         _c("text", [_vm._v(_vm._s(item.nickname))]),
                         _c("text", [_vm._v(_vm._s(item.time))]),
-                        _c("view", { staticClass: "zan-box" }, [
-                          _c("text", [_vm._v(_vm._s(item.zan))]),
-                          _c("text", { staticClass: "yticon icon-shoucang" })
-                        ]),
+                        _c(
+                          "view",
+                          { staticClass: "zan-box" },
+                          [
+                            _c(
+                              "uni-icon",
+                              {
+                                attrs: {
+                                  type: "checkmarkempty",
+                                  color: "#000",
+                                  size: "20",
+                                  mpcomid: "5afc328a-4-" + index
+                                }
+                              },
+                              [_vm._v(_vm._s(item.zan))]
+                            )
+                          ],
+                          1
+                        ),
                         _c("text", { staticClass: "content" }, [
                           _vm._v(_vm._s(item.content))
                         ])
@@ -318,39 +365,44 @@ var render = function() {
             _vm.loading
               ? _c("mixLoading", {
                   staticClass: "mix-loading",
-                  attrs: { mpcomid: "5afc328a-1" }
+                  attrs: { mpcomid: "5afc328a-5" }
                 })
               : _vm._e()
           ],
           1
         )
       ]),
-      _vm._m(0)
+      _c("view", { staticClass: "bottom" }, [
+        _c(
+          "view",
+          { staticClass: "input-box" },
+          [
+            _c("uni-icon", {
+              attrs: {
+                type: "paperplane",
+                color: "#000",
+                size: "20",
+                mpcomid: "5afc328a-6"
+              }
+            }),
+            _c("input", {
+              staticClass: "input",
+              attrs: {
+                type: "text",
+                placeholder: "点评一下把..",
+                "placeholder-style": "color:#adb1b9;"
+              }
+            })
+          ],
+          1
+        ),
+        _c("text", { staticClass: "confirm-btn" }, [_vm._v("提交")])
+      ])
     ],
     1
   )
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("view", { staticClass: "bottom" }, [
-      _c("view", { staticClass: "input-box" }, [
-        _c("text", { staticClass: "yticon icon-huifu" }),
-        _c("input", {
-          staticClass: "input",
-          attrs: {
-            type: "text",
-            placeholder: "点评一下把..",
-            "placeholder-style": "color:#adb1b9;"
-          }
-        })
-      ]),
-      _c("text", { staticClass: "confirm-btn" }, [_vm._v("提交")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

@@ -105,12 +105,14 @@ page {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   line-height: 1.3;
-  padding-right: 44rpx;
   padding-top: 16rpx;
 }
 .actions .action-item {
@@ -134,40 +136,6 @@ page {
     margin-right: 60rpx;
     font-size: 24rpx;
     color: #999;
-}
-.actions .yticon {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    width: 60rpx;
-    height: 60rpx;
-    font-size: 52rpx;
-}
-.actions .yticon.reverse {
-      position: relative;
-      top: 6rpx;
-      -webkit-transform: scaleY(-1);
-          -ms-transform: scaleY(-1);
-              transform: scaleY(-1);
-}
-.actions .yticon.active {
-      color: #ec706b;
-}
-.actions .icon-fenxiang2 {
-    font-weight: bold;
-    font-size: 36rpx;
-}
-.actions .icon-shoucang {
-    font-size: 44rpx;
 }
 .mix-loading {
   -webkit-transform: translateY(140rpx);
@@ -352,9 +320,6 @@ page {
     position: absolute;
     top: 10rpx;
     right: 10rpx;
-}
-.eva-right .zan-box .yticon {
-      margin-left: 8rpx;
 }
 .eva-right .content {
     font-size: 28rpx;
