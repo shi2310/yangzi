@@ -560,6 +560,7 @@ view.data-v-1bc131dc{
 	-webkit-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
+	border-radius:50%;
 }
 .mix-loading-icon.ready.data-v-a76db154 {
 	-webkit-transform: scaleX(1.3);

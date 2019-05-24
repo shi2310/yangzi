@@ -1,19 +1,16 @@
-<import src="/components/uni-icon/uni-icon.vue.wxml" />
-<import src="/components/mix-loading/mix-loading.vue.wxml" />
 <import src="/components/uni-search/uni-search.vue.wxml" />
 <import src="/components/pulldown-refresh/mix-pulldown-refresh.vue.wxml" />
 <import src="/components/uni-list/uni-list.vue.wxml" />
+<import src="/components/uni-icon/uni-icon.vue.wxml" />
+<import src="/components/mix-loading/mix-loading.vue.wxml" />
 <import src="/components/list-view/uni-list.vue.wxml" />
 <import src="/components/list-view/uni-list-item.vue.wxml" />
 <import src="/components/uni-nav-bar/uni-nav-bar.vue.wxml" />
-
-<template name="M5afc328a-default-5afc328a-1">75</template>
-
-<template name="M5afc328a-default-5afc328a-2">6</template>
-
-<template name="M5afc328a-default-5afc328a-3">分享</template>
-
-<template name="M5afc328a-default-5afc328a-4-+index">{{item.zan}}</template>
+<import src="/components/uni-grid/uni-grid.vue.wxml" />
+<import src="/common/slots.wxml" />
+<import src="/components/uni-list/uni-list-item.vue.wxml" />
+<import src="/components/uni-load-more/uni-load-more.vue.wxml" />
+<import src="/components/uni-badge/uni-badge.vue.wxml" />
 
 <template name="data-v-c1b94b56-default-1e92ee7e-3"><swiper id="swiper" class="_swiper data-v-c1b94b56 swiper-box" duration="{{300}}" current="{{tabCurrentIndex}}" bindchange="handleProxy" data-eventid="{{'1e92ee7e-3'}}" data-comkey="{{$k}}"><swiper-item wx:key="tabItem.id" key="{{tabItem.id}}" wx:for="{{tabBars}}" wx:for-index="index0" wx:for-item="tabItem" class="_swiper-item data-v-c1b94b56"><template bindloadMore="handleProxy" data-eventid="{{'1e92ee7e-2-'+index0}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'1e92ee7e-1-'+index0],$root}}" is="2c77a7b6"></template></swiper-item></swiper></template>
 
@@ -23,7 +20,11 @@
 
 <template name="M545d746e-default-545d746e-2">分享</template>
 
-<template name="M545d746e-default-545d746e-3-+index">{{item.zan}}</template>
+<template name="M5afc328a-default-5afc328a-1">75</template>
+
+<template name="M5afc328a-default-5afc328a-2">6</template>
+
+<template name="M5afc328a-default-5afc328a-3">分享</template>
 
 <template name="M732de629-default-732de629-8"><template show-extra-icon="true" title="消息" show-badge="true" badge-text="7" show-arrow="true" data="{{...$root['0'], ...$root[$kk+'732de629-3'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="我赞过的" data="{{...$root['0'], ...$root[$kk+'732de629-4'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="我评过的" show-badge="true" badge-text="5" data="{{...$root['0'], ...$root[$kk+'732de629-5'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="勋章" show-arrow="true" data="{{...$root['0'], ...$root[$kk+'732de629-6'],$root}}" is="7664ce00"></template><template show-extra-icon="true" title="关注" show-arrow="false" data="{{...$root['0'], ...$root[$kk+'732de629-7'],$root}}" is="7664ce00"></template></template>
 

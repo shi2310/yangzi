@@ -66,7 +66,7 @@
 								<text>{{item.nickname}}</text>
 								<text>{{item.time}}</text>
 								<view class="zan-box">
-									<uni-icon type="checkmarkempty" color="#000" size="20">{{item.zan}}</uni-icon>
+									<uni-icon type="checkmarkempty" color="#000" size="20" :txt="item.zan"></uni-icon>
 								</view>
 								<text class="content">{{item.content}}</text>
 							</view>

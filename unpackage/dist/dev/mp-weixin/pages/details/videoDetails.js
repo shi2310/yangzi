@@ -355,18 +355,15 @@ var render = function() {
                           "view",
                           { staticClass: "zan-box" },
                           [
-                            _c(
-                              "uni-icon",
-                              {
-                                attrs: {
-                                  type: "checkmarkempty",
-                                  color: "#000",
-                                  size: "20",
-                                  mpcomid: "545d746e-3-" + index
-                                }
-                              },
-                              [_vm._v(_vm._s(item.zan))]
-                            )
+                            _c("uni-icon", {
+                              attrs: {
+                                type: "checkmarkempty",
+                                color: "#000",
+                                size: "20",
+                                txt: item.zan,
+                                mpcomid: "545d746e-3-" + index
+                              }
+                            })
                           ],
                           1
                         ),
