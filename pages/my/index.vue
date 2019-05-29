@@ -28,7 +28,7 @@
 			<uni-list>
 				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'email'}" title="消息" show-badge="true" badge-text="7"
 				 show-arrow="true"></uni-list-item>
-				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'star'}" title="我赞过的"></uni-list-item>
+				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'star'}" title="我赞过的" @click="myStar"></uni-list-item>
 				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'chat'}" title="我评过的" show-badge="true" badge-text="5"></uni-list-item>
 				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'flag'}" title="勋章" show-arrow="true"></uni-list-item>
 				<uni-list-item show-extra-icon="true" :extra-icon="{type: 'eye'}" title="关注" show-arrow="false"></uni-list-item>
@@ -69,6 +69,11 @@
 				uni.showToast({
 					title: '个人信息',
 					icon: 'none'
+				})
+			},
+			myStar(){
+				uni.navigateTo({
+					url: `/pages/my/star`
 				})
 			}
 		}

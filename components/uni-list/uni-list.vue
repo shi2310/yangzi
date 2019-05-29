@@ -58,7 +58,7 @@
 	}
 </script>
 
-<style lang='scss' scoped>	
+<style scoped>	
 	.panel-scroll-box{
 		height: 100%;
 	}

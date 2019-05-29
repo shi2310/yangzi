@@ -3,7 +3,7 @@
 	<view class="view" @click="onClick()">
 		<view class="uni-icon" :class="['uni-icon-'+type]" :style="{color:color,'font-size':fontSize}">
 		</view>
-		<text v-if="txt!==''" class="info-text">{{txt}}</text>
+		<text v-if="txt!==''" :style="txtStyle">{{txt}}</text>
 		<slot></slot>
 	</view>
 </template>
@@ -31,6 +31,15 @@
 				type: [Number, String],
 				default: ''
 			},
+			txtStyle:{
+				type: Object,
+				default () {
+					return {
+						color: "#999999",
+						size: "26upx"
+					};
+				}
+			}
 		},
 		computed: {
 			fontSize() {
